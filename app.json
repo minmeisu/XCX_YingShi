@@ -1,0 +1,42 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/story/story",
+    "pages/personal/personal",
+    "pages/opinion/opinion",
+    "pages/collection/collection",
+    "pages/video/recommend/recommend",
+    "pages/honkong/recommend/recommend",
+    "pages/banner/recommend/recommend",   
+    "pages/details/details-list/details-list"
+   
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "经典影视",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar" : {
+    "list" : [
+      {
+      "pagePath" : "pages/index/index",
+      "text" : "首页",
+      "iconPath" : "image/shouyewei.png",
+      "selectedIconPath" : "image/shouyeyi.png"
+    },
+    {
+      "pagePath": "pages/story/story",
+      "text": "电影故事",
+      "iconPath": "image/yueduwei.png",
+      "selectedIconPath": "image/yueduyi.png"
+    },
+    {
+      "pagePath": "pages/personal/personal",
+      "text": "我的",
+      "iconPath": "image/wodewei.png",
+      "selectedIconPath": "image/wodeyi.png"
+    }
+    ]
+  }
+}

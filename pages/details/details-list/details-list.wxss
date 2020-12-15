@@ -1,0 +1,20 @@
+/* pages/details/details-list/details-list.wxss */
+/*导入组件wxParse的文件样式  */
+ @import "../../../wxParse/wxParse.wxss"; 
+
+page{background: #eee}
+  .details{background: url(http://h.thexxdd.cn/VUE/beijing.jpg) center bottom / cover;}  
+.resources-image{width: 100%; margin-left: 5rpx; margin-right: 20rpx;}
+.resources-image image{width: 100%; display: block;}
+.resources{display: flex; justify-content: space-between; padding: 40rpx 0;}
+.resources-text{width: 100%; margin-right: 5rpx;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                overflow: hidden;
+                }
+.resources-text text{font-size: 15px;}
+.resources-text view{line-height: 1.7;}
+.texta{color: white; padding-right: 20rpx;}
+.textb{color: coral;}
+#textc{font-size: 18px; color: white;}

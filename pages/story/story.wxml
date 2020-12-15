@@ -1,0 +1,27 @@
+<!--pages/story/story.wxml-->
+
+<!--加载动画  -->
+<view class='loading' wx:if="{{loading}}">
+  <view class='loading-view'>
+    <text></text>
+    <text></text>
+    <text></text>
+    <text></text>
+    <text></text>
+  </view>
+
+</view>
+
+
+<!-- 电影故事的页面 -->
+<block wx:for="{{ video }}" wx:for-item="item" wx:key="index">
+  <view class='story' id="{{ item.id }}" catchtap='Routine'>
+    <view class='story-image'>
+      <image src='{{ item.image }}'  mode='widthFix'></image>
+    </view>
+    <view class='story-list'>
+      <view class='story-move'>>{{item.name}}</view>
+      <view class='story-time'>{{item.add_time}}</view>
+    </view>
+  </view>
+</block>

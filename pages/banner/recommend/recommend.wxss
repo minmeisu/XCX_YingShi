@@ -1,0 +1,5 @@
+/* pages/banner/recommend/recommend.wxss */
+page{
+  background: #252832;
+  color: #fff;
+}

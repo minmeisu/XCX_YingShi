@@ -1,0 +1,97 @@
+/* pages/index/index.wxss */
+/*搜索框*/
+.search{
+  width: 100%;
+  height: 80rpx;
+  background: #f2f2f2;
+  display: flex;
+}
+.search .search-img{
+  margin: auto 0 auto 20rpx;
+}
+.search input{
+  font-size: 28rpx;
+  width: 600rpx;
+  height: 100%;
+  margin-left: 10px;
+}
+.search .xximg{
+  margin: auto 0 auto 10rpx;
+}
+
+/*轮播图的样式  */
+.content{
+  background: #f2f2f2;
+  padding: 10rpx;
+}
+.content .swiper{
+  width: 100%;
+  height: 400rpx;
+}
+.content .swiper image{
+  width: 100%;
+}
+/*推荐电影  */
+.container{
+  padding: 10rpx;
+}
+.container .Recommend{
+   margin-top: 60rpx; 
+}
+.container .Recommend .Recommend-text{
+  margin: 30rpx 0;
+  font-weight: bold;
+  font-size: 18px;
+}
+.Recommend-two .large{
+  font-size: 14px;
+  font-weight: bold;
+}
+.Recommend-two .small{
+  display: -webkit-box; 
+  font-size: 13px;
+  color:  #a7a9b8;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp:1;
+}
+.Recommend-two{
+  width: 49.3%;
+  margin: 5rpx 0;
+}
+.Recommend-two image{
+  width: 100%;
+}
+.Recommend-flex{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+/*搜索结果没有的时候返回的图片大小设置  */
+.showsousuo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.showsousuo image{
+   width: 600rpx;
+  height: 600rpx; 
+}
+/*数据加载结束之后的样式  */
+.wrap{
+  width: 100%;
+  height: 35rpx;
+  line-height: 35rpx;
+  text-align: center;
+}
+.wrap .span{
+  border-top: 0.5px solid #ffccdd;
+  display: inline-block;
+  width: 30%;
+  vertical-align: middle;
+}
+.base_text{
+  font-size: 14px;
+  color: #ffccdd;
+  margin: 0 5rpx;
+}

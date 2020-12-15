@@ -1,0 +1,112 @@
+<!--pages/index/index.wxml-->
+<!--搜索框 -->
+<view class='search'>
+  <icon type='search' class='search-img' size='13'></icon>
+  <input type='text' value='{{ value }}' placeholder='请输入电影演员' bindfocus="onbindfocus" bindconfirm="onbindconfirm"></input>
+  <icon type='clear' class='xximg' size='13'  
+  wx:if="{{ searchxx }}" bindtap='onbingtop'></icon>
+</view>
+
+<!--搜索  -->
+
+<view wx:if="{{ searchxx }}">
+<view class='Recommend' wx:if="{{ showsousuo }}">
+  <view class='Recommend-flex'>
+  <block wx:for="{{sousuo}}" wx:for-item="item" wx:key="index">
+    <view class='Recommend-two' id='{{ item.name.id }}' catchtap='Recoming'>
+    <!--电影的图片  -->
+      <view>
+      <image src="{{item.name.image}}" mode='widthFix'></image>
+      </view>
+    <!--电影标题  -->
+    <view class='large'>
+      <text>{{item.curriculum}}</text>
+    </view>
+    <!--电影的介绍  -->
+    <view class='small'>
+      <text>{{ item.lecturer }}</text>
+    </view>
+    </view>
+    </block>
+  </view>
+</view>
+ <view wx:else class='showsousuo'>
+  <image src='../../image/rekong.png'></image>
+</view> 
+</view>
+
+
+
+<!--输入框下边的内容，主要是用来控制展示与否  -->
+<view wx:if="{{ containershow }}">
+
+<!--轮播图部分 -->
+<view  class='content'>
+  <swiper class='swiper' indicator-dots="true" autoplay="true" circular="true" interval="3000" duration="1000">
+  <block  wx:for="{{ banner }}" wx:for-item="item" wx:key="item.index">
+    <swiper-item id="{{ item.id }}" catchtap="bannerimg">
+      <image src='{{ item.image }}'></image>
+    </swiper-item>
+  </block>
+  </swiper>
+</view>
+
+<!--推荐电影详情页  -->
+<view class='container'>
+<!--推荐电影  -->
+<view class='Recommend'>
+  <text class='Recommend-text'>推荐电影</text>
+  <view class='Recommend-flex'>
+   <block wx:for="{{recommend}}" wx:for-item="item" wx:key="index">
+     <view class='Recommend-two' id='{{ item.id }}' catchtap='Recoming'>
+     <!--电影的图片  -->
+      <view>
+       <image src="{{item.image}}" mode='widthFix'></image>
+      </view>
+     <!--电影标题  -->
+     <view class='large'>
+      <text>{{item.curriculum}}</text>
+     </view>
+     <!--电影的介绍  -->
+    <view class='small'>
+      <text>{{ item.lecturer }}</text>
+    </view>
+    </view>
+   </block>
+  </view>
+</view>
+
+<!--香港电影  -->
+<view class='Recommend'>
+  <view class='Recommend'>
+    <text class='Recommend-text'>香港电影</text>
+    <view class='Recommend-flex'>
+      <block wx:for="{{ hongkong }}" wx:for-item="item" wx:key="index">
+        <view class='Recommend-two' id="{{ item.id }}"  catchtap='recoming'>
+        <!--影片图片  -->
+       <view>
+        <image src='{{ item.image }}' mode='widthFix'></image>
+       </view> 
+       <view class='large'>
+      <text>{{item.curriculum}}</text>
+    </view>
+    <!--电影的介绍  -->
+    <view class='small'>
+      <text>{{ item.lecturer }}</text>
+    </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>
+
+<!--加载结束后的交互反馈  -->
+<view class='wrap' wx:if="{{ line }}" >
+  <text class='span'></text>
+  <text class='base_text'>我是有底线的</text>
+  <text class='span'></text>
+</view>
+
+</view>
+
+</view>

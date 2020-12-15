@@ -1,0 +1,13 @@
+<!--pages/collection/collection.wxml-->
+<block wx:for="{{ collect }}" wx:for-item="item" wx:key="index">
+<navigator url="../video/recommend/recommend?id={{item.goods.id}}">
+  <view class='story'>
+    <view class='story-image'>
+      <image src='{{item.goods.name.image}}' mode='widthFix'></image>
+    </view>
+    <view class='story-list'>
+      <view class='story-move'>{{item.goods.name.curriculum}}</view>
+    </view>
+  </view>
+  </navigator>
+</block>

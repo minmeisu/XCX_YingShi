@@ -1,0 +1,26 @@
+<!--pages/opinion/opinion.wxml-->
+<view class='opinion'>
+  <!--留言里边的多行文本书写  -->
+  <form bindsubmit="bindFormSubmit">
+    <textarea class='textarea' placeholder='我们是不完美的，需要你的建议' show-confirm-bar="false" name="textarea"> </textarea>
+    <button form-type="submit" size='mini' type='primary'>发表</button>
+  </form>
+</view>
+
+<!-- 留言区 -->
+<block wx:for="{{ messageall }}"  wx:for-item="item" wx:key="index">
+  <view class='opinion-message'>
+    <view class='opinion-list'>
+      <view class='head-root'>
+        <view><image src='{{avatarUrl}}'></image></view>
+        <view><text>{{nickName}}</text></view>
+      </view>
+      <view>
+        <text class='opinion-time'>{{item.add_time}}</text>
+      </view>
+    </view>
+    <view class='portrait'>
+      <text>{{item.message}}</text>
+    </view>
+  </view>
+</block>

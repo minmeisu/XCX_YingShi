@@ -1,0 +1,90 @@
+<!--pages/honkong/recommend/recommend.wxml-->
+<view class='video'>
+  <video src='{{ content.url }}' objectFit='fill' hidden='{{!xuanfu}}'></video>
+</view>
+<!-- 标题及简介按钮 -->
+<view class='video-list'>
+  <view>{{ content.curriculum }}</view>
+  <view class='video-tou' bindtap='Videotou'>
+    <text>简介</text>
+    <view>
+    <image src='/image/shouqi.png' hidden='{{ !hiddenName }}'></image>
+    </view>
+    <image src='/image/zhankai.png' hidden='{{ hiddenName }}'></image>
+  </view>
+</view>
+
+<!-- 转发及收藏 -->
+<view class='video-forward'>
+  <view>
+    <button open-type="share" size='mini' plain="true">
+      <image src='/image/zhanfa.png'></image>
+    </button>
+  </view>
+  <view wx:if="{{No}}" catchtap='collectioncont'>
+    <image src='/image/shoucang.png'></image>
+  </view>
+  <view wx:else catchtap='already'>
+    <image src='/image/yishoucang.png'></image>
+  </view>
+</view>
+
+<!--简介 -->
+<view class='video-brief' hidden="{{hiddenName}}">
+<!--实现简介上边的演员介绍  -->
+  <view class='scroll-top'>
+    <scroll-view class='scroll-view' scroll-x>
+      <block wx:for="{{ images }}" wx:for-item="item" wx:key="index">
+      <view class='scroll-view-item'>
+        <image src='{{ item.image }}'></image>
+        <view><text>{{item.Fullname}}</text></view>
+      </view>
+      </block>
+    </scroll-view>
+  </view>
+
+  <!-- 电影简介下边的具体内容 -->
+  <view class='duction'>
+    <text>简介</text>
+    <view class='duction-list'>
+     <text>{{content.lecturer}}</text>
+    </view>
+  </view>
+</view>
+
+<!--留言内容  -->
+<view class='message'>
+  <view class='message-text'>
+  精彩留言
+  </view>
+  <view class='user-two'>
+    <view class='user'>
+      <view>
+        <image src="https://wx.qlogo.cn/mmopen/vi_32/gOoHZweFNyhfiayrAibnDxtQ93UN3L4d4CKP9gaeFHeGGGcYK9bZoFp8JHkJnywiadQ76YcPpZQ5JKicOA4TLjGeOg/132">
+        </image>
+      </view>
+      <view>
+        <text>观水观澜</text>
+      </view>
+    </view>
+
+  <view class='user-good'>
+  <text>电影好看</text>
+  </view>
+  </view>
+</view>
+
+<!--评论  -->
+<view  class='comment' bindtap='clickMe'>
+  <input type='text' placeholder='说说你对这部电影的看法' disabled="disabled" placeholder-class="placeholder"></input>
+</view>
+
+<!--透明背景  -->
+<view  class='yinyin' hidden='{{xuanfu}}'  bindtap='clickMe'></view>
+<!--多行输入框  -->
+<view class='xunfu' hidden='{{xuanfu}}'>
+  <form bindsubmit="bindFormSubmit">
+    <textarea placeholder="输入你的好评" name="textarea" fixed="true" show-confirm-bar="false" placeholder-class="placeholder"/>
+    <button form-type="submit" size="mini" type='primary'> 发表 </button>
+  </form>
+</view>

@@ -1,0 +1,35 @@
+<!--pages/details/details-list/details-list.wxml-->
+<!--导入使用html插入页面的组件  -->
+<import src="../../../wxParse/wxParse.wxml"/>
+<view class='details'>
+ <view class='resources'>
+  <view class='resources-image'>
+    <image src='{{content.image}}' mode='widthFix'></image>
+  </view>
+  <view class='resources-text'>
+    <view>
+      <text id="textc">{{content.curriculum}}</text>
+    </view>
+    <view>
+      <text class='texta'>地区:</text><text class='textb'>{{content.region}}</text>
+    </view>
+    <view>
+      <text class='texta'>语言:</text><text class='textb'>{{content.language}}</text>
+    </view>
+    <view>
+      <text class='texta'>类型:</text><text class='textb'>{{content.type}}</text>
+    </view>
+    <view>
+      <text class='texta'>导演:</text><text class='textb'>{{content.director}}</text>
+    </view>
+    <view>
+      <text class='texta'>主演:</text><text class='textb'>{{content.Tostar}}</text>
+    </view>
+  </view>
+ </view>
+</view>
+
+<!--引用html插入渲染到页面中的模板引入  -->
+<view>
+ <template is="wxParse" data="{{wxParseData:article.nodes}}"/> 
+</view>

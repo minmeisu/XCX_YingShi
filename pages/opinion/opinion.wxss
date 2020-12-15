@@ -1,0 +1,16 @@
+/* pages/opinion/opinion.wxss */
+/*上边的功能样式  */
+page{background: #252832;}
+.textarea{background: white; width: 100%; font-size: 14px;}
+.opinion button{float: right; margin-top: 10rpx;}
+.opinion{margin-bottom: 170rpx;}
+/*留言区  */
+.head-root{display: flex;}
+.head-root image{width: 30px; height: 30px; border-radius: 5px;}
+.opinion-list{display: flex;
+              justify-content: space-between;
+              padding: 0 10rpx;}
+.opinion-message{color: white; border-bottom: 1px solid white;
+                padding-bottom: 15px; margin-bottom: 30px;}    
+.portrait{padding-left: 30px; font-size: 14px;}
+.opinion-time{font-size: 14px;}

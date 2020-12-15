@@ -1,0 +1,22 @@
+/* pages/personal/personal.wxss */
+.userinfo{
+  display: flex;
+   flex-direction: column; 
+  align-items: center;
+  background: #477bc7;
+  padding: 30rpx 0;
+}
+.userinfo-avatar{width: 128rpx; height: 128rpx; border-radius: 50%; margin: 20rpx;}    
+.userin-nickname{font-size: 30rpx; color: white;}     
+
+/*收藏，意见反馈  */
+.collection image{width: 60rpx; height: 60rpx;}
+.collection{
+  background: #3aa4f0;
+   text-align: center;
+  padding: 16rpx 0; width: 40%;
+  border-radius: 5rpx; color: white; font-size: 35rpx;
+}
+.setup{
+  display: flex; justify-content: space-between; margin: 20rpx 5rpx;
+}
